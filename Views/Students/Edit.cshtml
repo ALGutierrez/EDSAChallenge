@@ -1,0 +1,51 @@
+﻿@model Gestion_Alumnos_v1.Models.Student
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar Alumno</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label class="control-label"><b>Nombre</b></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"><b>Documento</b></label>
+                <input asp-for="DNI" class="form-control" />
+                <span asp-validation-for="DNI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"><b>Telefono</b></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Enabled" /> <b>Habilitado?</b>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="control-label"><b>Curso</b></label>
+                <select asp-for="IdGrade" class="form-control" asp-items="ViewBag.IdGrade"></select>
+                <span asp-validation-for="IdGrade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Aceptar" class="btn btn-danger" />
+                <a asp-action="Index" class="btn btn-primary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

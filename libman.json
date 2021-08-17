@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "font-awesome@5.15.4",
+      "destination": "wwwroot/font-awesome/"
+    },
+    {
+      "library": "bootstrap-combobox@1.2.0",
+      "destination": "wwwroot/bootstrap-combobox/"
+    },
+    {
+      "library": "bootstrap-table@1.18.3",
+      "destination": "wwwroot/bootstrap-table/"
+    },
+    {
+      "library": "bootstrap-datetimepicker@4.17.47",
+      "destination": "wwwroot/bootstrap-datetimepicker/"
+    },
+    {
+      "library": "bootstrap@5.1.0",
+      "destination": "wwwroot/bootstrap/"
+    },
+    {
+      "library": "toastr.js@2.1.4",
+      "destination": "wwwroot/toastr.js/"
+    },
+    {
+      "library": "jqueryui@1.12.1",
+      "destination": "wwwroot/jqueryui/"
+    }
+  ]
+}
